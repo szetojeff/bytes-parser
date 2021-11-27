@@ -7,6 +7,6 @@ import java.lang.annotation.RetentionPolicy;
  * Represents an parsable element field
  */
 @Retention(RetentionPolicy.RUNTIME)
-@interface ElementField {
+public @interface ElementField {
     int index();
 }

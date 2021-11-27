@@ -1,9 +1,9 @@
 package com.szetojeff.bytesparser;
 
 import com.szetojeff.bytesparser.annotation.ElementField;
-import com.szetojeff.bytesparser.datatype.ParsedResult;
 import com.szetojeff.bytesparser.datatype.ParsableType;
 import com.szetojeff.bytesparser.datatype.ParsableTypeProvider;
+import com.szetojeff.bytesparser.datatype.ParsedResult;
 
 import java.lang.reflect.Field;
 import java.nio.ByteOrder;
@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 /**
  * A parser knows how to parse bytes into a specific type
  * @author Jeff Szeto
@@ -66,7 +67,7 @@ public class BytesParser {
                             throw new IllegalArgumentException("Fields cannot have the same index:["
                                 + f1.getName() + ", " + f2.getName() + "]");
                         }
-                        return i1 == i2 ? 0 : (i1 > i2 ? 1 : -1);
+                        return Integer.compare(i1, i2);
                     }).collect(Collectors.toList());
     }
 

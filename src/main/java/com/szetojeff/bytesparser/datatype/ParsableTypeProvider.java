@@ -3,8 +3,6 @@ package com.szetojeff.bytesparser.datatype;
 import java.lang.reflect.Field;
 import java.nio.ByteOrder;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * @author Jeff

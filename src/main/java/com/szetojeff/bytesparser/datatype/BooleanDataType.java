@@ -1,7 +1,6 @@
 package com.szetojeff.bytesparser.datatype;
 
 import java.lang.reflect.Field;
-import java.nio.ByteBuffer;
 
 /**
  * <pre>
@@ -24,7 +23,8 @@ import java.nio.ByteBuffer;
 public class BooleanDataType implements ParsableType {
     @Override
     public ParsedResult parse(Field field, byte[] bytes, int beginPos) {
-        ByteBuffer bb = ByteBuffer.wrap(bytes, beginPos, toBytes(bitSize));
+        // TODO - support boolean data field
+        //ByteBuffer bb = ByteBuffer.wrap(bytes, beginPos, toBytes(bitSize));
 
         return null;
     }

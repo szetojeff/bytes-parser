@@ -12,7 +12,7 @@ import java.nio.ByteOrder;
  */
 public class BytesParserTest {
 
-    public static final int DELTA = 00001;
+    public static final double DELTA = 0.00001;
     double doubleVal = 231212.121d;
     float floatVal = 11.295f;
     long longVal = 29129381L;
@@ -22,16 +22,16 @@ public class BytesParserTest {
     byte byteVal = 48;
 
     @Test
-    public void parse_should_parseBytesInLittleEndian() throws Exception {
+    public void parse_should_parseBytesInLittleEndian() {
         parse_should_returnTypedObject(ByteOrder.LITTLE_ENDIAN);
     }
 
     @Test
-    public void parse_should_parseBytesInBigEndian() throws Exception {
+    public void parse_should_parseBytesInBigEndian() {
         parse_should_returnTypedObject(ByteOrder.BIG_ENDIAN);
     }
 
-    private void parse_should_returnTypedObject(ByteOrder byteOrder) throws Exception {
+    private void parse_should_returnTypedObject(ByteOrder byteOrder) {
         byte[] bytes = new byte[
                 8 + 8 + // double
                 4 + 4 + // float
